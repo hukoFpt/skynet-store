@@ -1,5 +1,6 @@
 import { CategoryMenu } from "./CategoryMenu.component";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 const HomepageTop = () => {
   return (
@@ -22,7 +23,23 @@ const HomepageTop = () => {
         <CategoryMenu icon="old" title="Linh Kiện Cũ" />
       </div>
       <div className="flex-1">
-        <Image className="rounded-lg drop-shadow-lg" src="/Banner/NetConstructor.png" alt="Thi công phòng máy" width={920} height={496} />
+        <div className="flex gap-4">
+          <Image
+            className="rounded-lg drop-shadow-lg"
+            src="/Banner/NET.png"
+            alt="Thi công phòng máy"
+            width={800}
+            height={496}
+          />
+          <div className="w-full rounded-lg overflow-hidden">
+            <ReactPlayer
+              width={428}
+              height={250}
+              src="https://youtu.be/sISJEBulVOU"
+            />
+            
+          </div>
+        </div>
       </div>
     </div>
   );
